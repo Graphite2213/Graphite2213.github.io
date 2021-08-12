@@ -23,13 +23,4 @@ document.getElementById("buttonsMenu").style.visibility = "visible";
 				}
 }
 
-setInterval(function() {
-fetch("http://localhost:3000")
-.then(res => res.json())
-.then(data => {
-  console.log(data);
-})
-.catch(rejected => {
-    console.log(rejected);
-});
-}, 3000);
+
