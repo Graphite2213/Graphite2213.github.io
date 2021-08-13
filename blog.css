@@ -140,13 +140,20 @@ body midtext {
 	
 }
 #ChangelogB {
-			background-color: #ffb005;
+			background-color: #1a1a1a;
 			color: white;
 			text-align: center;
 			padding: 13px 15px;
 	
 }
 #BlogB {
+			background-color: #ffb005;
+			color: white;
+			text-align: center;
+			padding: 13px 15px;
+	
+}
+#AbtB {
 			background-color: #1a1a1a;
 			color: white;
 			text-align: center;
@@ -154,20 +161,20 @@ body midtext {
 	
 }
 a:link {
-				color: white;
+				background-color: #ffb005;
 				text-decoration: none;
 }
 a:visited {
-				color: white;
+				background-color: #ffb005;
 				text-decoration: none;
 }
 
 a:hover {
-				color: white;
+				background-color: #ffb005;
 				text-decoration: none;
 }
 a:active {
-			 color: white;
+			background-color: #ffb005;
 				text-decoration: none;	
 }
 #CommandsB {
@@ -184,13 +191,6 @@ a:active {
 			padding: 13px 15px;
 	
 }
-#AbtB {
-			background-color: #1a1a1a;
-			color: white;
-			text-align: center;
-			padding: 13px 15px;
-	
-}
 #burger {
   width: 35px;
   height: 3px;
@@ -201,65 +201,33 @@ a.maincon {
 				background-color: transparent;
 				text-decoration: none;
 }
-
-#sha {
-				background-color: transparent;
+#blogpostgen {
 				color: white;
-				border-radius: 5%;
-				left: 30px;
-				margin-right: 10%;
-				padding: 0px;
-				margin-left: 10%;
-				margin-bottom: 30px;
+				background-color: black;
 				text-align: center;
-				border-style: solid;
-				border-color: #103775;
-			 border-width: 5px;
-}
-#atb {
-				background-color: transparent;
-				color: white;
-				border-radius: 5%;
-			 margin-left: 10%;
-				left: 30px;
-				margin-right: 10%;
-				padding: 0px;
-				margin-bottom: 30px;
-				text-align: center;
-				border-style: solid;
-				border-color: #c4004c;
-			 border-width: 5px;
-}
-#mbt {
-				background-color: transparent;
-				color: white;
-				border-radius: 5%;
-			 margin-left: 10%;
-				left: 30px;
-				margin-right: 10%;
-				animation-name: anim;
-    animation-duration: 5s;
-				padding: 0px;
-				margin-bottom: 30px;
-				text-align: center;
-				border-style: solid;
+				border-width: 5px;
 				border-color: #ebdfdf;
-			 border-width: 5px;
+				border-style: solid;
+			 margin-left: 10px;
+			 margin-right: 10px;
 }
-
-#mbt:hover {
-animation-name: anim;
-animation-duration: 5s;
+#blogpostsha {
+				color: white;
+				background-color: black;
+				text-align: center;
+				border-width: 5px;
+				border-color: #103775;
+				border-style: solid;
+			 margin-left: 10px;
+			 margin-right: 10px;
 }
-#sha:hover {
-animation-name: anim;
-animation-duration: 5s;
-}
-#atb:hover {
-animation-name: anim;
-animation-duration: 5s;
-}
-a, a:hover, a:focus, a:active {
-      text-decoration: none;
-      color: inherit;
+#blogpostatb {
+				color: white;
+				background-color: black;
+				text-align: center;
+				border-width: 5px;
+				border-color: #c4004c;
+				border-style: solid;
+			 margin-left: 10px;
+			 margin-right: 10px;
 }

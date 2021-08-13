@@ -147,7 +147,7 @@ body midtext {
 	
 }
 #BlogB {
-			background-color: #ffb005;
+			background-color: #1a1a1a;
 			color: white;
 			text-align: center;
 			padding: 13px 15px;
@@ -179,6 +179,13 @@ a:active {
 }
 #StatusB {
 			background-color: #1a1a1a;
+			color: white;
+			text-align: center;
+			padding: 13px 15px;
+	
+}
+#AbtB {
+			background-color: #ffb005;
 			color: white;
 			text-align: center;
 			padding: 13px 15px;
