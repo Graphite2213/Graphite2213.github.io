@@ -1,58 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="description" content="Graphite's website and stuff">
-<meta name="keywords" content="Graphite, Graphite2213, Sheer Heart Attack, SHA, AutoThreads">
-<meta name="author" content="Graphite">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script data-ad-client="ca-pub-7807756755037113" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<link rel="stylesheet" href="mainstyle.css">
-<title>Graphite</title>				
+    <meta charset="UTF-8">
+    <meta name="description" content="Graphite's website and stuff">
+    <meta name="keywords" content="Graphite, Graphite2213, Sheer Heart Attack, SHA, AutoThreads">
+    <meta name="author" content="Graphite">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mainstyle.css">
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <link rel="icon" href="icon.ico">
+    <title>graphite.dll</title>
 </head>
+
 <body>
-<span style="font-family:Courier">
-<a href="index.html" id="maincon" style="text-decoration: none">				
-<div id="topend">
-Graphite is trying his best.
-</div>
-</a>
-</span>
-<a onclick="js:toggleMenuM()">
-<div id="menu">
-<div id="burger"></div>
-<div id="burger"></div>
-<div id="burger"></div>
-</div>		
-</a>
-<div id="buttonsMenu" style="margin-bottom: 150px">
-<a href="index.html" id="home">
-<div id="HomeB">
-Home
-</div>
-</a>
-<a href="projects.html">
-<div id="ChangelogB">
-My Projects
-</div>
-</a>
-<a href="abtme.html">
-<div id="AbtB">
-About me
-</div>
-</a>
-<a href="contact.html">
-<div id="StatusB">
-Contact
-</div>
-</a>
-</div>
-<h1><p class="title" style="font-size: 50px""> Im Graphite</p></h1>
-<p class="midtext" style="font-size: 30px"> 
-I do programming and play videogames. You can find all of my projects and contacts and other boring stuff here. More importantly you can find guides, commands and changelogs of my precious discord bots too.
-</p>
-<div id="sidemenu" style="display: none">
-<script src="shamenu.js">
-</script>	
+    <div class="window" style="width: 330px" id="hellobox">
+        <div class="title-bar">
+            <div class="title-bar-text">Hello! (1)</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <p>Im Graphite! I do coding and play videogames.</p>
+        </div>
+    </div>
+
+    <div class="window" style="width: 330px" id="basicinfo">
+        <div class="title-bar">
+            <div class="title-bar-text">Basic info (2)</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <p>
+                <img src="the-more-you-know.gif" id="themoreyouknow">
+                <div id="longbreak"> </div>
+                Here are some things you might want to know about me: <br> <br> <br> Age: 14 <br> <br> Pronouns: He/Him <br>
+                <br> Interests: Coding and any sort of science <br> <br> Dislikes: <br> • Any sort of toxic (internet) culture <br> • DSMP (Ties into the first point) <br> • People with no common sense / Unnecessarily rude people <br> • Art (Because im
+                bad at it, full respect for people who do art) <br> • JavaScript
+                <br> <br> Favourites: <br> • Games: Team Fortress 2, Subnautica, Cuphead, Minecraft <br> • Musician: Will Wood (Fr tho check him out, his music slaps) <br> • Youtuber(s): Everyone from Hermitcraft, Pyrocynical, Zack Freedman <br> • Programming
+                language: C++ <br>
+                <div id="longbreak-2"> </div>
+                <button id="showproj" onclick="javascript:showprojClick()"> My Projects </button>
+            </p>
+        </div>
+    </div>
+
+    <div class="window" style="width: 330px" id="projects">
+        <div class="title-bar">
+            <div class="title-bar-text">My precious projects (3)</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <p>
+                <img src="tea-lore-tea.gif" id="themoreyouknow">
+                <div id="longbreak"> </div>
+                I worked on a few projects but these are the ones i worked on a pip more seriously: <br> <br>
+                <li>
+                    <ul>
+                        <li>
+                            <details>
+                                <summary>Sheer Heart Attack</summary> Sheer Heart Attack is a Discord bot i made that's basically stand fight simulator but in Discord. Sadly due to other projects and priorities it's offline as of now. </details>
+                        </li>
+                    </ul>
+                </li>
+
+            </p>
+        </div>
+    </div>
+
+    <div id="taskbar">
+        <button id="startbutton"> <b> <img src="https://98.js.org/images/start.png"> Start </b> </button>
+        <div id="taskbar-div"> </div>
+        <div id="taskbar-div-2"> </div>
+        <div id="infotray">
+            <img src="https://98.js.org/images/icons/task-scheduler-16x16.png" id="trayicons"> <img src="https://98.js.org/images/icons/audio-okay-16x16.png" id="trayicons">
+            <span id="clock" onload="javascript:currentTime()">00:00 PM
+        </div>
+        </span>
+        </div>
+        <script src="main.js" language="javascript" type="text/javascript">
+        </script>
 </body>
+
 </html>
