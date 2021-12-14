@@ -23,12 +23,15 @@ function currentTime() {
     let t = setTimeout(function() { currentTime() }, 1000);
 }
 
-function runMobileCheck() {
+function runMobileCheck(debugging) {
 
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|OperaMini/i.test(navigator.userAgent)) {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|OperaMini/i.test(navigator.userAgent) || debugging) {
 
         playErrorSound();
-        document.getElementById("phoneError").style.visibility = "visible";
+        document.getElementById("phoneError").style.display = "block";
+        document.getElementById("basicinfo").style.display = "none";
+        document.getElementById("hellobox").style.display = "none";
+        document.getElementById("projects").style.display = "none";
 
     }
 
@@ -39,10 +42,13 @@ function playErrorSound() {
 }
 
 function phoneButtonOk() {
-    document.getElementById("phoneError").style.visibility = "hidden";
+    document.getElementById("phoneError").style.display = "none";
+    document.getElementById("basicinfo").style.display = "block";
+    document.getElementById("hellobox").style.display = "block";
+    document.getElementById("projects").style.display = "block";
 }
 currentTime();
-runMobileCheck();
+runMobileCheck(false);
 
 function showprojClick() {
     document.getElementById("projects").style.visibility = "visible";
