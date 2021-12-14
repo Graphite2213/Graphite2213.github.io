@@ -22,8 +22,29 @@ function currentTime() {
     document.getElementById("clock").innerHTML = time;
     let t = setTimeout(function() { currentTime() }, 1000);
 }
+
+function runMobileCheck() {
+
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|OperaMini/i.test(navigator.userAgent)) {
+
+        playErrorSound();
+        document.getElementById("phoneError").style.visibility = "visible";
+
+    }
+
+}
+
+function playErrorSound() {
+    new Audio("./errsound.mp3").play();
+}
+
+function phoneButtonOk() {
+    document.getElementById("phoneError").style.visibility = "hidden";
+}
 currentTime();
+runMobileCheck();
 
 function showprojClick() {
     document.getElementById("projects").style.visibility = "visible";
+
 }

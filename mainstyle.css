@@ -12,6 +12,10 @@ body {
     height: 100px;
 }
 
+#phoneError {
+    visibility: hidden;
+}
+
 #taskbar {
     background-color: #bfbfbf;
     width: 101vw;
@@ -32,6 +36,8 @@ body {
 
 #projects {
     visibility: hidden;
+    position: relative;
+    bottom: 200px;
 }
 
 #taskbar-div {
