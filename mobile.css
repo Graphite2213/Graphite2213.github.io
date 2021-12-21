@@ -52,10 +52,12 @@ body {
 #box1body {
     text-align: center;
     font-size: 11px;
+    margin: auto;
 }
 
 #projects {
     display: none;
     text-align: center;
     font-size: 11px;
+    margin: auto;
 }
