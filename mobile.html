@@ -7,70 +7,44 @@
     <meta name="keywords" content="Graphite, Graphite2213, Sheer Heart Attack, SHA, AutoThreads">
     <meta name="author" content="Graphite">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="mainstyle.css">
+    <link rel="stylesheet" href="mobile.css">
     <link rel="stylesheet" href="https://unpkg.com/98.css">
     <link rel="icon" href="icon.ico">
     <title>graphite.dll</title>
 </head>
 
 <body>
-    <div class="window draggableWindow" style="width: 330px" id="hellobox">
-        <div class="dragExtension"></div>
-        <div class="title-bar draggableTitle">
-            <div class="title-bar-text">Hello! (1)</div>
+    <div class="window" style="width: 100%" id="box1">
+        <div class="title-bar">
+            <div class="title-bar-text">Hello! (1/2)</div>
             <div class="title-bar-controls">
                 <button aria-label="Minimize"></button>
                 <button aria-label="Maximize"></button>
-                <button aria-label="Close" onclick="javascript:closeWindow()"></button>
+                <button aria-label="Close"></button>
             </div>
         </div>
-        <div class="window-body">
-            <p>Im Graphite! I do coding and play videogames.</p>
-        </div>
-    </div>
-
-    <div class="window draggableWindow" style="width: 330px" id="phoneError">
-        <div class="title-bar draggableTitle">
-            <div class="title-bar-text">Error</div>
-            <div class="title-bar-controls">
-                <button aria-label="Minimize"></button>
-                <button aria-label="Maximize"></button>
-                <button aria-label="Close" onclick="javascript:closeWindow()"></button>
-            </div>
-        </div>
-        <div class="window-body">
-            <p>You seem to be using a phone or other small device to view this website. If you proceed without switching on desktop mode, it will look like garbage (actually it might look like garbage either way) as the page is not optimised for screens
-                smaller than a regular computer screen. UPDATE: You could also go to the mobile-optimised page by clicking that button below. <br>
-                <div id="longbreak"> </div> <br> <button onclick="javascript:phoneButtonOk()"> Understood </button></p> <br> <button onclick="javascript:phoneButtonRedirect()"> Redirect me to the mobile page instead </button>
-        </div>
-    </div>
-
-    <div class="window draggableWindow" style="width: 330px" id="basicinfo">
-        <div class="title-bar draggableTitle">
-            <div class="title-bar-text">Basic info (2)</div>
-            <div class="title-bar-controls">
-                <button aria-label="Minimize"></button>
-                <button aria-label="Maximize"></button>
-                <button aria-label="Close" onclick="javascript:closeWindow()"></button>
-            </div>
-        </div>
-        <div class="window-body">
+        <div class="window-body" id="box1body">
             <p>
+                Hi im Graphite! I do coding and play videogames. Here are some basic things you might want to know about me:
+                <div id="longbreak-3"> </div>
                 <img src="the-more-you-know.gif" id="themoreyouknow">
                 <div id="longbreak"> </div>
-                Here are some things you might want to know about me: <br> <br> <br> Age: 14 <br> <br> Pronouns: He/Him <br>
-                <br> Interests: Coding and any sort of science <br> <br> I can code in C++, JS, HTML and CSS (although those don't count) and just a pip of C# and Java<br> <br> Dislikes: <br> • Any sort of toxic (internet) culture <br> • DSMP (Ties into
-                the first point) <br> • People with no common sense / Unnecessarily rude people <br> • Art (Because im bad at it, full respect for people who do art) <br> • JavaScript
+                Age: 14 <br> <br> Pronouns: He/Him <br>
+                <br> Interests: Coding and any sort of science <br> <br> I can code in C++, JS, HTML and CSS (although those don't count) and just a pip of C# and Java<br> <br> Dislikes: <br> • Any sort of toxic (internet) culture
+                <br> • DSMP (Ties into the first point) <br> • People with no common sense / Unnecessarily rude people <br> • Art (Because im bad at it, full respect for people who do art) <br> • JavaScript
                 <br> <br> Favourites: <br> • Games: Team Fortress 2, Subnautica, Cuphead, Minecraft <br> • Musician: Will Wood (Fr tho check him out, his music slaps) <br> • Youtuber(s): Pyrocynical, Hermitcraft lads, Tom Scott, CGP Grey, Zack Freedman
                 <br> • Programming language: C++ <br><br> DNI: You wish lmao <br>
                 <div id="longbreak-2"> </div>
-                <button id="showproj" onclick="javascript:showprojClick()"> My Projects </button>
+                <button id="showproj" onclick="javascript:showprojClickMob()"> My Projects </button>
             </p>
         </div>
     </div>
 
-    <div class="window draggableWindow" style="width: 330px" id="projects">
-        <div class="title-bar draggableTitle">
+
+
+
+    <div class="window" style="width: 100%" id="projects">
+        <div class="title-bar">
             <div class="title-bar-text">My precious projects (3)</div>
             <div class="title-bar-controls">
                 <button aria-label="Minimize"></button>
@@ -126,24 +100,9 @@
                         </details>
                     </li>
                 </ul>
+                <button onclick="javascript:goBackMobile()"> Go Back </button>
             </p>
         </div>
     </div>
-
-    <div id="taskbar">
-        <button id="startbutton"> <b> <img src="https://98.js.org/images/start.png"> Start </b> </button>
-        <div id="taskbar-container">
-        </div>
-        <div id="taskbar-div"> </div>
-        <div id="taskbar-div-2"> </div>
-        <div id="infotray">
-            <img src="https://98.js.org/images/icons/task-scheduler-16x16.png" id="trayicons"> <img src="https://98.js.org/images/icons/audio-okay-16x16.png" id="trayicons">
-            <span id="clock" onload="javascript:currentTime()">00:00 PM
-        </div>
-        </span>
-        </div>
-        <script src="main.js" language="javascript" type="text/javascript">
-        </script>
+    <script src="main.js" language="javascript" type="text/javascript"></script>
 </body>
-
-</html>
