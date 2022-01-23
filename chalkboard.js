@@ -126,7 +126,7 @@ socket.onmessage = function(e) {
             addMessage(e.msg, e.user);
         }
     } else {
-        if (e.server == curserver) {
+        if (e.server == curserver && e.com == "update") {
             for (dat of e.materials) {
                 document.getElementsByClassName(`${dat.data.locx}/${dat.data.locy}`)[0].style.backgroundColor = dat.data.material;
             }
