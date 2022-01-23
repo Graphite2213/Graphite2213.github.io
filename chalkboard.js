@@ -67,7 +67,6 @@ function dragOn(e) {
     let splitAr = e.target.classList.item(1).split("/");
     switch (tool) {
         case 'brush':
-            console.log(size);
             switch (size) {
                 case 1:
                     e.target.style.backgroundColor = color
@@ -128,7 +127,7 @@ socket.onmessage = function(e) {
     } else {
         if (e.server == curserver && e.com == "update") {
             for (dat of e.materials) {
-                document.getElementsByClassName(`${dat.data.locx}/${dat.data.locy}`)[0].style.backgroundColor = dat.data.material;
+                document.getElementsByClassName(`${dat.locx}/${dat.locy}`)[0].style.backgroundColor = dat.material;
             }
         }
     }
