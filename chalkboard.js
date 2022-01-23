@@ -38,7 +38,6 @@ document.getElementById("drawing-table").addEventListener("click", (e) => {
     let splitAr = e.target.classList.item(1).split("/");
     switch (tool) {
         case 'brush':
-            console.log(`${parseInt(splitAr[0] + 1)}/${splitAr[1]}`);
             switch (size) {
                 case 1:
                     e.target.style.backgroundColor = color;
@@ -163,7 +162,6 @@ function switchTO(item, elem) {
 }
 
 function drawSquare(locx, locy) {
-    console.log(locx, locy)
     switch (size) {
         case 1:
             document.getElementsByClassName(`${locx}/${locy}`)[0].style.backgroundColor = color;

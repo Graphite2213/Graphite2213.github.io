@@ -78,7 +78,6 @@ let body = document.querySelector("body");
     let getStyle = window.getComputedStyle(target);
     let left = parseInt(getStyle.left);
     let top = parseInt(getStyle.top);
-    console.log(getStyle.left);
     target.parentElement.style.left = `${left + movementX}px`;
     target.parentElement.style.top = `${top + movementY}px`;
 }
