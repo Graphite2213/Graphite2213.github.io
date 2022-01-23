@@ -8,7 +8,7 @@ let UUID = 0;
 let gridON = true;
 let changes = [];
 
-let socket = new WebSocket("wss://nullsmc.ddns.net:8029");
+let socket = new WebSocket("wss://graphote.tech:8029");
 
 user = prompt("Please enter your preferred username:");
 
@@ -42,7 +42,7 @@ document.getElementById("drawing-table").addEventListener("click", (e) => {
             switch (size) {
                 case 1:
                     e.target.style.backgroundColor = color;
-                    socket.send(JSON.stringify({ com: "update", materials: [{ material: color, locx: splitAr[0], locy: splitAr[1], server: curserver }] }));
+                    socket.send(JSON.stringify({ com: "update", server: curserver, materials: [{ material: color, locx: splitAr[0], locy: splitAr[1], server: curserver }] }));
                     break;
 
                 case 2:
@@ -51,7 +51,7 @@ document.getElementById("drawing-table").addEventListener("click", (e) => {
                     document.getElementsByClassName(`${parseInt(splitAr[0]) - 1}/${splitAr[1]}`)[0].style.backgroundColor = color;
                     document.getElementsByClassName(`${splitAr[0]}/${parseInt(splitAr[1]) + 1}`)[0].style.backgroundColor = color;
                     document.getElementsByClassName(`${splitAr[0]}/${parseInt(splitAr[1]) - 1}`)[0].style.backgroundColor = color;
-                    socket.send(JSON.stringify({ com: "update", materials: [{ material: color, locx: splitAr[0], locy: splitAr[1], server: curserver }, { material: color, locx: parseInt(splitAr[0]) + 1, locy: splitAr[1], server: curserver }, { material: color, locx: parseInt(splitAr[0]) - 1, locy: splitAr[1], server: curserver }, { material: color, locx: splitAr[0], locy: parseInt(splitAr[1]) + 1, server: curserver }, { material: color, locx: splitAr[0], locy: parseInt(splitAr[1]) - 1, server: curserver }] }));
+                    socket.send(JSON.stringify({ com: "update", server: curserver, materials: [{ material: color, locx: splitAr[0], locy: splitAr[1], server: curserver }, { material: color, locx: parseInt(splitAr[0]) + 1, locy: splitAr[1], server: curserver }, { material: color, locx: parseInt(splitAr[0]) - 1, locy: splitAr[1], server: curserver }, { material: color, locx: splitAr[0], locy: parseInt(splitAr[1]) + 1, server: curserver }, { material: color, locx: splitAr[0], locy: parseInt(splitAr[1]) - 1, server: curserver }] }));
                     break;
             }
             break;
@@ -80,7 +80,7 @@ function dragOn(e) {
                     document.getElementsByClassName(`${parseInt(splitAr[0]) - 1}/${splitAr[1]}`)[0].style.backgroundColor = color;
                     document.getElementsByClassName(`${splitAr[0]}/${parseInt(splitAr[1]) + 1}`)[0].style.backgroundColor = color;
                     document.getElementsByClassName(`${splitAr[0]}/${parseInt(splitAr[1]) - 1}`)[0].style.backgroundColor = color;
-                    changes.unshift({ material: color, locx: splitAr[0], locy: splitAr[1], server: curserver }, { material: color, locx: `${parseInt(splitAr[0]) + 1}`, locy: splitAr[1], server: curserver }, { material: color, locx: `${parseInt(splitAr[0]) - 1}`, locy: splitAr[1], server: curserver }, { material: color, locx: splitAr[0], locy: `${parseInt(splitAr[1]) + 1}`, server: curserver }, { material: color, locx: splitAr[0], locy: `${parseInt(splitAr[1]) - 1}`, server: curserver });
+                    changes.unshift({ material: color, server: curserver, locx: splitAr[0], locy: splitAr[1], server: curserver }, { material: color, locx: `${parseInt(splitAr[0]) + 1}`, locy: splitAr[1], server: curserver }, { material: color, locx: `${parseInt(splitAr[0]) - 1}`, locy: splitAr[1], server: curserver }, { material: color, locx: splitAr[0], locy: `${parseInt(splitAr[1]) + 1}`, server: curserver }, { material: color, locx: splitAr[0], locy: `${parseInt(splitAr[1]) - 1}`, server: curserver });
                     break;
             }
 
@@ -97,7 +97,7 @@ document.addEventListener("mouseup", () => {
         .map(id => {
             return changes.find(a => `${a.locx}/${a.locy}` === id)
         })
-    socket.send(JSON.stringify({ com: "update", materials: unique }));
+    socket.send(JSON.stringify({ com: "update", server: curserver, materials: unique }));
     changes = [];
 });
 
@@ -171,7 +171,7 @@ function drawSquare(locx, locy) {
             document.getElementsByClassName(`${locx - 1}/${locy}`)[0].style.backgroundColor = color;
             document.getElementsByClassName(`${locx}/${locy - 1}`)[0].style.backgroundColor = color;
             document.getElementsByClassName(`${locx - 1}/${locy - 1}`)[0].style.backgroundColor = color;
-            socket.send(JSON.stringify({ com: "update", materials: [{ material: color, locx: locx, locy: locy, server: curserver }, { material: color, locx: locx - 1, locy: locy, server: curserver }, { material: color, locx: locx, locy: locy - 1, server: curserver }, { material: color, locx: locx - 1, locy: locy - 1, server: curserver }] }));
+            socket.send(JSON.stringify({ com: "update", server: curserver, materials: [{ material: color, locx: locx, locy: locy, server: curserver }, { material: color, locx: locx - 1, locy: locy, server: curserver }, { material: color, locx: locx, locy: locy - 1, server: curserver }, { material: color, locx: locx - 1, locy: locy - 1, server: curserver }] }));
             break;
     }
 }
