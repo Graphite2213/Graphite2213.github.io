@@ -1,0 +1,59 @@
+body {
+    background: repeating-linear-gradient( 45deg, black, black 8px, #020205 8px, #020205 18px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    user-select: none;
+    text-align: center;
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(font/Gilroy-Light.otf);
+}
+
+#infocard {
+    background-color: #020205;
+    width: 30vw;
+    height: 60vh;
+    border: white 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-evenly;
+}
+
+.hex {
+    cursor: pointer;
+    fill-opacity: 1;
+    stroke: white;
+    stroke-width: 5px;
+    transform: scale(0.2);
+    transform-origin: 50% 50%;
+}
+
+#color-fill .hex {
+    fill: black;
+}
+
+#title {
+    font-family: Gilroy;
+    color: white;
+    font-size: 50px;
+    margin-bottom: 5%;
+}
+
+#maintext {
+    color: white;
+    font-family: Gilroy;
+    font-size: xx-large;
+    max-width: 90%;
+    min-width: 10%;
+}
+
+#prns {
+    text-align: center;
+}
