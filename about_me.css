@@ -89,6 +89,7 @@ body {
 }
 }
 
+
 @media only screen and (min-width:1023px) and (max-width: 1439px)
 {
 #infocard {
@@ -113,8 +114,9 @@ body {
 #maintext {
     color: white;
     font-family: Gilroy;
-    font-size: 1vw;
+    font-size: 1.5vh;
     max-width: 90%;
     min-width: 10%;
 }
 }
+
