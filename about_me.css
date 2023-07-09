@@ -1,5 +1,5 @@
 body {
-    background: repeating-linear-gradient( 45deg, black, black 8px, #020205 8px, #020205 18px);
+    background: repeating-linear-gradient( 45deg, black, black 8px, #141721 8px, #141721 18px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,6 +14,25 @@ body {
     src: url(font/Gilroy-Light.otf);
 }
 
+.hex {
+    cursor: pointer;
+    fill-opacity: 1;
+    stroke: white;
+    stroke-width: 5px;
+    transform: scale(0.2);
+    transform-origin: 50% 50%;
+}
+
+
+
+#color-fill .hex {
+    fill: black;
+}
+
+#prns {
+    text-align: center;
+}
+
 #infocard {
     background-color: #020205;
     width: 30vw;
@@ -24,19 +43,6 @@ body {
     justify-content: space-around;
     align-items: center;
     align-content: space-evenly;
-}
-
-.hex {
-    cursor: pointer;
-    fill-opacity: 1;
-    stroke: white;
-    stroke-width: 5px;
-    transform: scale(0.2);
-    transform-origin: 50% 50%;
-}
-
-#color-fill .hex {
-    fill: black;
 }
 
 #title {
@@ -54,6 +60,31 @@ body {
     min-width: 10%;
 }
 
-#prns {
-    text-align: center;
+
+@media only screen and (max-width:900px) {
+#infocard {
+    background-color: #020205;
+    width: 90vw;
+    height: 80vh;
+    border: white 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-evenly;
+}
+#title {
+    font-family: Gilroy;
+    color: white;
+    font-size: 8vw;
+    margin-bottom: 5%;
+}
+
+#maintext {
+    color: white;
+    font-family: Gilroy;
+    font-size: 3.5vw;
+    max-width: 90%;
+    min-width: 10%;
+}
 }

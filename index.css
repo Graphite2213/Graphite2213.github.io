@@ -22,13 +22,157 @@ body {
     display: inline-block;
 }
 
+#hex {
+    width: 50vw;
+    height: auto;
+}
+
+.side-text {
+    user-select: none;
+    font-family: Gilroy;
+}
+
+
+/* Media */
+
+@media only screen and (min-width:320px) {
+
+#hex {
+    zoom: 200%;
+    margin-left: 6.5%;
+}
+
 #triangle1 {
+/* Phone */
+    transform: translate(7vw, 0vh) rotate(120deg);
+    transition: transform 1s;
+}
+
+#triangle1:hover {
+    transform: translate(5vw, -1vh) rotate(120deg);
+}
+
+#triangle2 {
+    transform: translate(0, -2vh) rotate(180deg);
+    transition: transform 1s;
+    perspective: 10000px;
+}
+
+#triangle2:hover {
+    transform: rotateY(180deg) translate(0, -2vh) rotate(180deg);
+}
+
+#triangle3 {
+    transform: translate(-7vw, 0vh) rotate(240deg);
+    transition: transform 1s;
+}
+
+#triangle3:hover {
+    transform: translate(-5vw, -1vh) rotate(240deg);
+}
+
+#triangle4 {
+    transform: translate(7vw, -3vh) rotate(60deg);
+    transition: transform 1s;
+}
+
+#triangle4:hover {
+    transform: translate(5vw, -2vh) rotate(60deg);
+}
+
+#triangle5 {
+    transform: translate(0, -1vh);
+    transition: transform 1s;
+}
+
+#triangle5:hover {
+    transform: rotateY(180deg) translate(0vw, 2vh);
+    perspective: 10000px;
+}
+
+#triangle6 {
+    transform: translate(-7vw, -3vh) rotate(300deg);
+    transition: transform 1s;
+}
+
+#triangle6:hover {
+    transform: translate(-5vw, -2vh) rotate(300deg);
+}
+}
+
+@media only screen and (min-width:900px) {
+#triangle1 {
+    transform: translate(7vw, -2vh) rotate(120deg);
+    transition: transform 1s;
+}
+
+#triangle1:hover {
+    transform: translate(5vw, 0vh) rotate(120deg);
+}
+
+#triangle2 {
+    transform: translate(0, -2vh) rotate(180deg);
+    transition: transform 1s;
+    perspective: 10000px;
+}
+
+#triangle2:hover {
+    transform: rotateY(180deg) translate(0, -2vh) rotate(180deg);
+}
+
+#triangle3 {
+    transform: translate(-7vw, -2vh) rotate(240deg);
+    transition: transform 1s;
+}
+
+#triangle3:hover {
+    transform: translate(-5vw, 1vh) rotate(240deg);
+}
+
+#triangle4 {
+    transform: translate(7vw, -2vh) rotate(60deg);
+    transition: transform 1s;
+}
+
+#triangle4:hover {
+    transform: translate(5vw, -3vh) rotate(60deg);
+}
+
+#triangle5 {
+    transform: translate(0, 0vh);
+    transition: transform 1s;
+}
+
+#triangle5:hover {
+    transform: rotateY(180deg) translate(0vw, 2vh);
+    perspective: 10000px;
+}
+
+#triangle6 {
+    transform: translate(-7vw, -2vh) rotate(300deg);
+    transition: transform 1s;
+}
+
+#triangle6:hover {
+    transform: translate(-5vw, -3vh) rotate(300deg);
+}
+}
+
+@media (min-width:1281px)
+{
+/* PC */
+#hex {
+    zoom: 0%;
+    margin-left: 0%;
+}
+
+ #triangle1 {
     transform: translate(7vw, 5vh) rotate(120deg);
     transition: transform 1s;
 }
 
 #triangle1:hover {
-    transform: translate(5vw, 3vh) rotate(120deg);
+    transform: translate(5vw, 5vh) rotate(120deg);
 }
 
 #triangle2 {
@@ -77,16 +221,5 @@ body {
 #triangle6:hover {
     transform: translate(-5vw, -3vh) rotate(300deg);
 }
-
-#hex {
-    width: 50vw;
-    height: auto;
+   
 }
-
-.side-text {
-    user-select: none;
-    font-family: Gilroy;
-}
-
-
-/* Animation */
