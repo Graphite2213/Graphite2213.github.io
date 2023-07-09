@@ -48,14 +48,14 @@ body {
 #title {
     font-family: Gilroy;
     color: white;
-    font-size: 50px;
+    font-size: 6vh;
     margin-bottom: 5%;
 }
 
 #maintext {
     color: white;
     font-family: Gilroy;
-    font-size: medium;
+    font-size: 2vh;
     max-width: 90%;
     min-width: 10%;
 }
@@ -90,7 +90,7 @@ body {
 }
 
 
-@media only screen and (min-width:1023px) and (max-width: 1439px)
+@media only screen and (min-width:1023px) and (max-width: 1440px)
 {
 #infocard {
     background-color: #020205;

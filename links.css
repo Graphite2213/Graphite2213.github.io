@@ -47,14 +47,14 @@ body {
 #title {
     font-family: Gilroy;
     color: white;
-    font-size: 50px;
+    font-size: 5vh;
     margin-bottom: 5%;
 }
 
 #maintext {
     color: white;
     font-family: Gilroy;
-    font-size: xx-large;
+    font-size: 3vh;
     max-width: 90%;
     min-width: 10%;
 }
