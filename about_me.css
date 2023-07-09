@@ -88,3 +88,33 @@ body {
     min-width: 10%;
 }
 }
+
+@media only screen and (min-width:1023px) and (max-width: 1439px)
+{
+#infocard {
+    background-color: #020205;
+    width: 30vw;
+    height: 70vh;
+    border: white 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-evenly;
+}
+
+#title {
+    font-family: Gilroy;
+    color: white;
+    font-size: 2.5vw;
+    margin-bottom: 5%;
+}
+
+#maintext {
+    color: white;
+    font-family: Gilroy;
+    font-size: 1vw;
+    max-width: 90%;
+    min-width: 10%;
+}
+}
