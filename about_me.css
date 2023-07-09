@@ -90,7 +90,7 @@ body {
 }
 
 
-@media only screen and (min-width:1023px) and (max-width: 1440px)
+@media only screen and (min-width:1023px) and (max-width: 1441px)
 {
 #infocard {
     background-color: #020205;
@@ -119,4 +119,3 @@ body {
     min-width: 10%;
 }
 }
-
