@@ -1,0 +1,141 @@
+body {
+    background: repeating-linear-gradient( 45deg, black, black 8px, #141721 8px, #141721 18px);
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    user-select: none;
+    text-align: center;
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(font/Gilroy-Light.otf);
+}
+
+@font-face {
+    font-family: Gilroy-Bold;
+    src: url(font/Gilroy-Bold.ttf);
+}
+
+#infocard {
+    background-color: #020205;
+    width: 30vw;
+    height: 60vh;
+    border: white 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: space-evenly;
+    color: white;
+}
+
+.hex {
+    cursor: pointer;
+    fill-opacity: 1;
+    stroke: white;
+    stroke-width: 5px;
+    transform: scale(0.2) translate(0, -11vh);
+    transform-origin: 50% 50%;
+    margin: 0;
+}
+
+#blogposts {
+    flex-grow: 2;
+    max-width: 80%;
+    width: 80%;
+    height: 80%;
+    max-height: 80%;
+    border-top: 1px white solid;
+    border-bottom: 1px white solid;
+    display: flex;
+    overflow-y: scroll;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: space-evenly;
+}
+
+#title {
+    font-size: 3.2em;
+    font-family: Gilroy;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.post {
+    width: 98%;
+    height: 25%;
+    border: 1px white solid;
+    flex-shrink: 0;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.pinned {
+    border: 2px #20a312 solid;
+    outline: 1px #20a312 solid;
+    outline-offset: 2px;
+}
+
+
+.blogt {
+    font-family: Gilroy;
+    font-weight: 10px;
+    font-size: 5vw;
+    transform: translate(0, 110%);
+}
+
+#postpage {
+    width: 80%;
+    min-height: 50vh;
+    text-wrap: break-word;
+    border-top: 1px white solid;
+    border-bottom: 1px white solid;
+    font-family: Gilroy;
+    font-size: 1.2em;
+    display: none;
+}
+
+#posttext {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#color-fill .hex {
+    fill: black;
+}
+
+@media only screen and (max-width:900px) {
+
+#infocard {
+    background-color: #020205;
+    width: 90vw;
+    height: 80vh;
+    border: white 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-evenly;
+}
+
+}
+
+
+@media only screen and (min-width:1023px) and (max-width: 1439px)
+{
+#infocard {
+    background-color: #020205;
+    width: 30vw;
+    height: 70vh;
+    border: white 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-evenly;
+}
+}

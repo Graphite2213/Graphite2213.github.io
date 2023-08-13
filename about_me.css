@@ -43,6 +43,8 @@ body {
     justify-content: space-around;
     align-items: center;
     align-content: space-evenly;
+    max-width: 95%;
+    min-width: 30%;
 }
 
 #title {
@@ -66,7 +68,7 @@ body {
     background-color: #020205;
     width: 90vw;
     height: 80vh;
-    border: white 1px solid;
+    border: white 1px dashed;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
