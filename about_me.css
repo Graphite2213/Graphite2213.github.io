@@ -36,7 +36,7 @@ body {
 #infocard {
     background-color: #020205;
     width: 30vw;
-    height: 60vh;
+    height: 70vh;
     border: white 1px solid;
     display: flex;
     flex-direction: column;
@@ -50,7 +50,7 @@ body {
 #title {
     font-family: Gilroy;
     color: white;
-    font-size: 6vh;
+    font-size: 5vh;
     margin-bottom: 5%;
 }
 

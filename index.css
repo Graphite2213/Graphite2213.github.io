@@ -172,7 +172,7 @@ body {
 }
 
 #triangle1:hover {
-    transform: translate(5vw, 5vh) rotate(120deg);
+    transform: translate(5vw, 3vh) rotate(120deg);
 }
 
 #triangle2 {
@@ -191,7 +191,7 @@ body {
 }
 
 #triangle3:hover {
-    transform: translate(-5vw, 1vh) rotate(240deg);
+    transform: translate(-5vw, 2vh) rotate(240deg);
 }
 
 #triangle4 {
@@ -200,7 +200,7 @@ body {
 }
 
 #triangle4:hover {
-    transform: translate(5vw, -3vh) rotate(60deg);
+    transform: translate(5vw, -2vh) rotate(60deg);
 }
 
 #triangle5 {
@@ -219,7 +219,7 @@ body {
 }
 
 #triangle6:hover {
-    transform: translate(-5vw, -3vh) rotate(300deg);
+    transform: translate(-5vw, -2vh) rotate(300deg);
 }
    
 }
