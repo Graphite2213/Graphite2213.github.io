@@ -14,7 +14,7 @@ body {
     src: url(font/Gilroy-Light.otf);
 }
 
-.hex {
+#hex {
     cursor: pointer;
     fill-opacity: 1;
     stroke: white;
@@ -24,7 +24,7 @@ body {
 }
 
 
-#color-fill .hex {
+#color-fill #hex {
     fill: black;
 }
 
@@ -62,8 +62,8 @@ body {
     min-width: 10%;
 }
 
-/* MOBILE */
-@media only screen and (max-width:900px) 
+/* MOBILE & TABLET */
+@media only screen and (max-width:1023px) 
 {
     #infocard 
     {

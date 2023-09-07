@@ -5,7 +5,6 @@ body {
     align-items: center;
     height: 100vh;
     color: white;
-    user-select: none;
     text-align: center;
 }
 
@@ -19,6 +18,52 @@ body {
     src: url(font/Gilroy-Bold.ttf);
 }
 
+#dropdown
+{
+    position: relative;
+    display: inline-block;
+    border: white 1px solid;
+    margin-bottom: 5%;
+    min-width: 80%;
+}
+
+#dropbtn
+{
+    font-family: Gilroy;
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+#dropdown-content a 
+{
+    font-family: Gilroy;
+    color: white;
+    padding: 12px 16px;  
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+#dropdown-content a:hover {background-color: #f1f1f1; color: black;}
+
+#dropdown-content
+{
+    display: none;
+    position: absolute;
+    background-color: #020205;
+    min-width: 100%;
+    z-index: 1;
+    border: white 1px solid;
+}
+
+#dropdown:hover #dropdown-content {
+    display: block;
+}
+
 #infocard {
     background-color: #020205;
     width: 30vw;
@@ -30,9 +75,10 @@ body {
     align-items: center;
     align-content: space-evenly;
     color: white;
+    transition: width 1s, height 1s;
 }
 
-.hex {
+#hex {
     cursor: pointer;
     fill-opacity: 1;
     stroke: white;
@@ -65,6 +111,12 @@ body {
     margin-top: 5%;
 }
 
+.date {
+    font-family: Gilroy;
+    font-size: 0.9em;
+    color: #a4a4a7;
+}
+
 .post {
     width: 98%;
     height: 25%;
@@ -72,6 +124,12 @@ body {
     flex-shrink: 0;
     margin-top: 5%;
     margin-bottom: 5%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-evenly;
 }
 
 .pinned {
@@ -85,7 +143,12 @@ body {
     font-family: Gilroy;
     font-weight: 10px;
     font-size: 5vw;
-    transform: translate(0, 110%);
+    margin-top: 3%;
+    margin-bottom: -1%;
+}
+
+.fontescape {
+    font-family: 'Heebo', sans-serif;
 }
 
 #postpage {
@@ -99,43 +162,79 @@ body {
     display: none;
 }
 
+#date
+{
+    font-family: Gilroy;
+    color: #a4a4a7;
+    font-size: 1em;
+    margin-bottom: 3%;
+    margin-top: 0;
+    display: none;
+}
+
 #posttext {
     margin-top: 5%;
     margin-bottom: 5%;
 }
 
-#color-fill .hex {
+#color-fill #hex {
     fill: black;
 }
 
-@media only screen and (max-width:900px) {
-
-#infocard {
-    background-color: #020205;
-    width: 90vw;
-    height: 80vh;
-    border: white 1px solid;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    align-content: space-evenly;
+::-webkit-scrollbar {
+    width: 5px;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: white;
 }
 
-}
 
-
-@media only screen and (min-width:1023px) and (max-width: 1439px)
+@media only screen and (max-width:900px) 
 {
-#infocard {
-    background-color: #020205;
-    width: 30vw;
-    height: 70vh;
-    border: white 1px solid;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    align-content: space-evenly;
+    #infocard 
+    {
+        width: 90vw;
+        height: 80vh;
+    }
 }
+
+
+@media only screen and (min-width:1023px) and (max-width: 1921px)
+{
+    #infocard 
+    {
+        width: 30vw;
+        height: 75vh;
+        /*margin-top: 10%;*/
+    }
+
+    .blogt 
+    {
+        font-size: 1.7em;
+    }
+
+    #postpage 
+    {
+        font-size: 1.7em;
+    }
+
+    #title 
+    {
+        margin-bottom: 2%;
+        margin-top: 2%;
+    }
+
+    #posttext 
+    {
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
 }
+

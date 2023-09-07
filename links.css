@@ -14,7 +14,7 @@ body {
     src: url(font/Gilroy-Light.otf);
 }
 
-.hex {
+#hex {
     cursor: pointer;
     fill-opacity: 1;
     stroke: white;
@@ -23,13 +23,8 @@ body {
     transform-origin: 50% 50%;
 }
 
-#color-fill .hex {
+#color-fill #hex {
     fill: black;
-}
-
-
-#prns {
-    text-align: center;
 }
 
 #infocard {
@@ -48,7 +43,8 @@ body {
     font-family: Gilroy;
     color: white;
     font-size: 5vh;
-    margin-bottom: 5%;
+    margin-bottom: 0;
+    margin-top: 2%;
 }
 
 #maintext {
@@ -59,31 +55,22 @@ body {
     min-width: 10%;
 }
 
+/* PHONE AND TABLET */
+@media only screen and (max-width:1023px) 
+{
+    #infocard 
+    {
+        width: 90vw;
+        height: 80vh;
+    }
 
-@media only screen and (max-width:900px) {
-#infocard {
-    background-color: #020205;
-    width: 90vw;
-    height: 80vh;
-    border: white 1px solid;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    align-content: space-evenly;
-}
-#title {
-    font-family: Gilroy;
-    color: white;
-    font-size: 8vw;
-    margin-bottom: 5%;
-}
+    #title 
+    {
+        font-size: 8vw;
+    }
 
-#maintext {
-    color: white;
-    font-family: Gilroy;
-    font-size: 7vw;
-    max-width: 90%;
-    min-width: 10%;
-}
+    #maintext 
+    {
+        font-size: 7vw;
+    }
 }

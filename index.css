@@ -86,7 +86,7 @@ body {
 }
 
 #triangle5:hover {
-    transform: rotateY(180deg) translate(0vw, 2vh);
+    transform: rotateY(180deg) translate(0vw, -1vh);
     perspective: 10000px;
 }
 
@@ -144,7 +144,7 @@ body {
 }
 
 #triangle5:hover {
-    transform: rotateY(180deg) translate(0vw, 2vh);
+    transform: rotateY(180deg) translate(0vw, 0vh);
     perspective: 10000px;
 }
 
