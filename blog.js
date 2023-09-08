@@ -107,8 +107,8 @@ async function blogclick()
     getByID("blogposts").style.display = "none";
     getByID("postpage").style.display = "block";
     getByID("postpage").style.overflow = "scroll";
-    getByID("infocard").style.width = "70vw";
-    getByID("infocard").style.height = "90vh";
+    if (height > 900) getByID("infocard").style.width = "70vw";
+    if (height > 900) getByID("infocard").style.height = "90vh";
     getByID("title").innerHTML = posts[rqPath].title;
     getByID("date").innerHTML = posts[rqPath].date;
     getByID("dropdown").style.display = "none";
