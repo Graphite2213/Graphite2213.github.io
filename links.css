@@ -55,6 +55,25 @@ body {
     min-width: 10%;
 }
 
+a.linktext:link
+{
+   color: white;
+   text-decoration: underline;
+}
+a.linktext:visited
+{
+   color: white;
+   text-decoration: underline;
+}
+a.linktext:hover
+{
+   color: gray;
+}
+a.linktext:active
+{
+   color: gray;
+}
+
 /* PHONE AND TABLET */
 @media only screen and (max-width:1023px) 
 {
