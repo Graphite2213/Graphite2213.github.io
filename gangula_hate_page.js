@@ -60,7 +60,7 @@ function CallForBus(moveCamera = false) {
             Mark.bindPopup(`<p class='linetitle'>${x.line_title}</p><p class='tdistance'>${minutes_to} ${minuta} do dolaska.</p><p class='sdistance'>Udaljen ${stops_to} ${stanica}.</p>`);
         });
         activeGroup.addTo(map);
-        setTimeout(CallForBus, 10000);
+        setTimeout(CallForBus, 30000);
     });
 }
 function LoadedPage() {
