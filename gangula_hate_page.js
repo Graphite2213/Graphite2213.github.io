@@ -25,13 +25,13 @@ function GetStationData(stationId) {
         return data;
     });
 }
-function CallForBus() {
+function CallForBus(moveCamera = false) {
     return __awaiter(this, void 0, void 0, function* () {
         const stationData = yield GetStationData(busCode);
         // @ts-ignore
         let Leaflet = L;
         const StationCoords = [Number(stationData.station_x), Number(stationData.station_y)];
-        map.setView([stationData.station_x, stationData.station_y], 16);
+        if (moveCamera) map.setView([stationData.station_x, stationData.station_y], 16);
         const Marker = Leaflet.marker(StationCoords).addTo(activeGroup);
         Marker.bindPopup(`<p>${stationData.station_name}</p>`);
         stationData.vehicles.forEach((x) => {
@@ -88,7 +88,7 @@ function OnSearchClick() {
         return;
     busCode = Number(fieldValue);
     activeGroup.clearLayers();
-    CallForBus();
+    CallForBus(true);
 }
 function onMarkerClick(e) {
     e.target.openPopup();
