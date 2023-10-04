@@ -27,6 +27,7 @@ function GetStationData(stationId) {
 }
 function CallForBus(moveCamera = false) {
     return __awaiter(this, void 0, void 0, function* () {
+        activeGroup.clearLayers();
         const stationData = yield GetStationData(busCode);
         // @ts-ignore
         let Leaflet = L;
