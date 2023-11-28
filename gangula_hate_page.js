@@ -95,3 +95,9 @@ function onMarkerClick(e) {
     e.target.openPopup();
 }
 //# sourceMappingURL=index.js.map
+
+function handle(e)
+{
+    e.preventDefault();
+    OnSearchClick();
+}
