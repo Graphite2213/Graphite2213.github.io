@@ -1,4 +1,5 @@
-const serverURL = "https://frenchfry.graphite2264.workers.dev";
+//const serverURL = "https://frenchfry.graphite2264.workers.dev";
+const serverURL = "http://localhost:8000/"
 
 function getByID(id) { return document.getElementById(id) };
 
@@ -107,8 +108,8 @@ async function blogclick()
     getByID("blogposts").style.display = "none";
     getByID("postpage").style.display = "block";
     getByID("postpage").style.overflow = "scroll";
-    if (height > 900) getByID("infocard").style.width = "70vw";
-    if (height > 900) getByID("infocard").style.height = "90vh";
+    if (window.innerHeight > 900) getByID("infocard").style.width = "70vw";
+    if (window.innerHeight > 900) getByID("infocard").style.height = "90vh";
     getByID("title").innerHTML = posts[rqPath].title;
     getByID("date").innerHTML = posts[rqPath].date;
     getByID("dropdown").style.display = "none";
