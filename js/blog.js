@@ -1,5 +1,5 @@
-const serverURL = "https://frenchfry.graphite2264.workers.dev";
-// const serverURL = "http://localhost:8000/"
+//const serverURL = "https://frenchfry.graphite2264.workers.dev";
+const serverURL = "http://localhost:8000/"
 
 function getByID(id) { return document.getElementById(id) };
 
@@ -102,6 +102,33 @@ function addPosts(data, filter)
     getByID("blogposts").innerHTML = innerhtm;
 }
 
+async function revert()
+{
+    window.history.pushState(null, `Blog`, `/blog.html`);
+    
+    getByID("blogposts").style.display = "block";
+    getByID("postpage").style.display = "none";
+    if (window.innerHeight > 900) getByID("infocard").style.width = "30vw";
+    getByID("infocard").style.height = "75vh";
+    if (window.innerHeight <= 900) getByID("infocard").style.height = "80vh";;
+    getByID("infocard").style.position = "static";
+    getByID("infocard").style.top = "0";
+    if (window.innerHeight <= 900) getByID("infocard").style.top = "1vh";
+    getByID("title").innerHTML = "Blog";
+    getByID("date").innerHTML = "";
+    getByID("dropdown").style.display = "block";
+    getByID("date").style.display = "none";
+    if (mode == "projects") getByID("hexlink").setAttribute('href', "./index.html");
+    else getByID("hexlink").setAttribute('href', "./index.html");
+    getByID("posttext").innerHTML = "";
+    setTimeout(() => { getByID("posttext").style.color = "transparent"; }, 1000);
+
+    const d = await makeRequest({action: "init-blog"});
+    origposts = JSON.parse(d).posts;
+    addTags(JSON.parse(d).tags);
+    addPosts(JSON.parse(d).posts, "All");
+}
+
 async function blogclick(post)
 {
     let blogID;
@@ -111,9 +138,10 @@ async function blogclick(post)
         rqPath = blogID[blogID.length - 1];
     }
     if (post != undefined) rqPath = post + ".html";
-    console.log(rqPath);
     const postData = await makeRequest({action: `getdata-${mode}`, path: rqPath});
     
+    window.history.pushState(`${rqPath.slice(0, -5)}`, `${rqPath.slice(0, -5)}`, `/blog.html?post=${rqPath.slice(0, -5)}`);
+
     getByID("blogposts").style.display = "none";
     getByID("postpage").style.display = "block";
     if (window.innerHeight > 900) getByID("infocard").style.width = "70vw";
@@ -130,3 +158,18 @@ async function blogclick(post)
     getByID("posttext").innerHTML = postData;
     setTimeout(() => { getByID("posttext").style.color = "white"; }, 1000);
 }
+
+window.onpopstate = (e) => {
+    console.log(e);
+    if (e.state != null)
+    {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const post = urlParams.get('post')
+        if (post != undefined) blogclick(post);
+    }
+    else
+    {
+        revert();
+    }
+};
