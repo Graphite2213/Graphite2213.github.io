@@ -236,6 +236,10 @@ body {
         width: 90vw;
         height: 80vh;
     }
+
+    .blogimage {
+        width: 75vw;
+    }
 }
 
 

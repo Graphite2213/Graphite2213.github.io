@@ -117,9 +117,9 @@ async function blogclick(post)
     getByID("blogposts").style.display = "none";
     getByID("postpage").style.display = "block";
     if (window.innerHeight > 900) getByID("infocard").style.width = "70vw";
-    if (window.innerHeight > 900) getByID("infocard").style.height = "fit-content";
-    if (window.innerHeight > 900) getByID("infocard").style.position = "absolute";
-    if (window.innerHeight > 900) getByID("infocard").style.top = "0";
+    getByID("infocard").style.height = "fit-content";
+    getByID("infocard").style.position = "absolute";
+    getByID("infocard").style.top = "0";
     getByID("title").innerHTML = posts[rqPath].title;
     getByID("date").innerHTML = posts[rqPath].date;
     getByID("dropdown").style.display = "none";
