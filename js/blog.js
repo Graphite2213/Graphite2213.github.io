@@ -29,6 +29,10 @@ async function pageLoad()
     origposts = JSON.parse(d).posts;
     addTags(JSON.parse(d).tags);
     addPosts(JSON.parse(d).posts, "All");
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const post = urlParams.get('post')
+    if (post != undefined) blogclick(post);
 }
 
 async function pageLoadProjects()
@@ -98,10 +102,15 @@ function addPosts(data, filter)
     getByID("blogposts").innerHTML = innerhtm;
 }
 
-async function blogclick()
+async function blogclick(post)
 {
-    const blogID = event.target.classList;
-    const rqPath = blogID[blogID.length - 1];
+    let blogID;
+    let rqPath;
+    if (post == undefined) { 
+        blogID = event.target.classList
+        rqPath = blogID[blogID.length - 1];
+    }
+    if (post != undefined) rqPath = post + ".html";
     console.log(rqPath);
     const postData = await makeRequest({action: `getdata-${mode}`, path: rqPath});
     
