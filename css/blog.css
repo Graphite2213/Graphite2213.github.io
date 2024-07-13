@@ -158,7 +158,7 @@ body {
     text-align: center;
     font-size: .7em;
     background-color: grey;
-    width: 22vw;
+    width: 22.35vw;
     height: auto;
 }
 
@@ -175,8 +175,10 @@ body {
     font-family: 'Heebo', sans-serif;
 }
 .idi {
-    display: inline-block;
+    display: flex;
     flex-shrink: 1;
+    flex-direction: column;
+    align-items: center;
 }
 
 #postpage {
@@ -208,6 +210,7 @@ body {
     margin-bottom: 5%;
     text-align: left;
     color: transparent;
+    font-size: 0.9em;
 }
 
 #color-fill #hex {
