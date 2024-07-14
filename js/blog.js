@@ -1,5 +1,5 @@
-//const serverURL = "https://frenchfry.graphite2264.workers.dev";
-const serverURL = "http://localhost:8000/"
+const serverURL = "https://frenchfry.graphite2264.workers.dev";
+//const serverURL = "http://localhost:8000/"
 
 function getByID(id) { return document.getElementById(id) };
 
