@@ -189,9 +189,10 @@ h2 {
 .imageheader {
     text-align: center;
     font-size: .7em;
-    background-color: grey;
+    background-color: transparent;
     width: 22.35vw;
     height: auto;
+    font-style: italic;
 }
 
 .imggallery {
