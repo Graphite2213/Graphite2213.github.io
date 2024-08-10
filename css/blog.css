@@ -74,7 +74,21 @@ h2 {
     cursor: pointer;
 }
 
-#dropdown-content a:hover {background-color: #f1f1f1; color: black;}
+#dropdown-content a:hover {
+    background-color: #f1f1f1; 
+    color: black;
+}
+
+#dropdown-content .serbiaposting:hover {
+    background: linear-gradient(to bottom, #d12121 31%, #2121d1 32%, #2121d1 70%,#dedede 68%, #dedede 100%);
+    color: white;
+}
+
+#dropdown-content .basketball:hover {
+    background: linear-gradient(to bottom, #db7516 23%, black 24%, black 28%, #db7516 29%, #db7516 74%, black 74%, black 78%, #db7516 79%, #db7516 100%);
+    color: white;
+}
+
 
 #dropdown-content
 {
@@ -162,14 +176,21 @@ h2 {
     color: grey;
     font-style: italic;
     text-align: center;
+    margin: 0;
 }
 
 .pinned {
-    border: 2px #20a312 solid;
     outline: 1px #20a312 solid;
     outline-offset: 2px;
 }
 
+.basketball {
+    border-image: linear-gradient(to bottom, #db7516 32%, black 33%, black 35%,#db7516 36%, #db7516 66%, black 67%, black 69%, #db7516 70%, #db7516 100%) 5;
+}
+
+.serbiaposting {
+    border-image: linear-gradient(to bottom, #d12121 32%, #2121d1 33%, #2121d1 67%,#dedede 68%, #dedede 100%) 5;
+}
 
 .blogt {
     font-family: Gilroy;
@@ -252,7 +273,7 @@ h2 {
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 1px;
 }
   
   /* Track */
@@ -305,8 +326,8 @@ h2 {
 
     #title 
     {
-        margin-bottom: 1%;
-        margin-top: 2%;
+        margin-bottom: 3%;
+        margin-top: 3%;
     }
 
     #posttext 

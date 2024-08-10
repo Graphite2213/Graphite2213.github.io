@@ -48,7 +48,7 @@ function addTags(data)
 {
     let htmlcon = "";
     for (const x of data) {
-        htmlcon += `<a onclick=tagClick()>${x}</a>\n`;
+        htmlcon += `<a onclick=tagClick() class="${x.toLowerCase()}">${x}</a>\n`;
     }
     getByID("dropdown-content").innerHTML = htmlcon;
 }
@@ -70,30 +70,15 @@ function addPosts(data, filter)
     }
 
     let innerhtm = ``;
-    // This isnt the most efficient way to put pins first,
-    // sorting would probably be better but who can be bothered
-    for (const x of data)
-    {
-        let dclasses = `post ${x.data} ${x.path}`;
-        let tclasses = `blogt ${x.data} ${x.path}`;
-        
-        if (x.pinned && x.tags.includes(filter)) 
-        {
-            dclasses = "pinned " + dclasses; 
-        
-            let template = `<div onclick="blogclick()" class="${dclasses}"><p class="${tclasses}">${x.title}</p><p class="date">${x.date}</p></div>`
-        
-            innerhtm += template;
-        }
-    }
 
     for (const x of data)
     {
         let dclasses = `post ${x.data} ${x.path}`;
         let tclasses = `blogt ${x.data} ${x.path}`;
         
-        if (!x.pinned && x.tags.includes(filter)) 
+        if (x.tags.includes(filter)) 
         {
+            dclasses = `${x.tags[1].toLowerCase()} ` + dclasses;
             let template = `<div onclick="blogclick()" class="${dclasses}"><p class="${tclasses}">${x.title}</p><p class="date">${x.date}</p></div>`
         
             innerhtm += template;
