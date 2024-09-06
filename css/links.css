@@ -39,6 +39,11 @@ body {
     align-content: space-evenly;
 }
 
+#title p {
+    margin-top: -2%;
+    margin-bottom: 0;
+}
+
 #title {
     font-family: Gilroy;
     color: white;
