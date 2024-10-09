@@ -9,6 +9,7 @@ body {
     align-items: center;
     height: 100vh;
     color: white;
+    margin: 0;
 }
 
 @font-face {
@@ -29,6 +30,7 @@ body {
 #hex {
     width: 50vw;
     height: auto;
+    margin-bottom: 10vh;
 }
 
 .side-text {
