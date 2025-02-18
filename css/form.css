@@ -1,0 +1,111 @@
+.date {
+    font-family: Gilroy;
+    font-size: 0.9em;
+    color: #a4a4a7;
+}
+
+.post {
+    width: 97%;
+    height: 25%;
+    border: 1px #dedede solid;
+    flex-shrink: 0;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-evenly;
+}
+
+.alternate {
+    color: grey;
+    font-style: italic;
+    text-align: center;
+    margin: 0;
+}
+
+.pinned {
+    outline: 1px #20a312 solid;
+    outline-offset: 2px;
+}
+
+.basketball {
+    border-image: linear-gradient(to bottom, #db7516 32%, black 33%, black 35%,#db7516 36%, #db7516 66%, black 67%, black 69%, #db7516 70%, #db7516 100%) 5;
+}
+
+.serbiaposting {
+    border-image: linear-gradient(to bottom, #d12121 32%, #2121d1 33%, #2121d1 67%,#dedede 68%, #dedede 100%) 5;
+}
+
+.blogt {
+    font-family: Gilroy;
+    font-weight: 10px;
+    font-size: 5vw;
+    margin-top: 3%;
+    margin-bottom: -1%;
+}
+
+.blogimage {
+    border: 2px gray solid;
+    display: block;
+    width: 22vw;
+    height: auto;
+}
+
+.imageheader {
+    text-align: center;
+    font-size: .7em;
+    background-color: transparent;
+    width: 22.35vw;
+    height: auto;
+    font-style: italic;
+}
+
+.imggallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    row-gap: 1.3vh;
+}
+
+.fontescape {
+    font-family: 'Heebo', sans-serif;
+}
+.idi {
+    display: flex;
+    flex-shrink: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media only screen and (max-width:900px) 
+{
+    #infocard 
+    {
+        width: 90vw;
+        height: 80vh;
+    }
+
+    .blogimage {
+        width: 75vw;
+    }
+
+    .imageheader {
+        width: 75vw;
+    }
+}
+
+
+
+@media only screen and (min-width:1023px) and (max-width: 1921px)
+{
+    .blogt 
+    {
+        font-size: 1.7em;
+    }
+}

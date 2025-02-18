@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Graphite</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body onload="onLoad()">
+    <div id="hex">
+        <div class="triangleWrapper">
+            <svg id="triangle1" viewBox="0 0 100 100">
+            <a href="about_me.html"><polygon points="50 0, 100 100, 0 100" style="fill:transparent;stroke:white;stroke-width:.8px; pointer-events: fill;"/>
+            <text x="0" y="0" fill="white" text-anchor="start" transform="rotate(270) translate(-90, 53)" class="side-text">About me</text>
+            </a>
+            </svg>
+        </div>
+        <div class="triangleWrapper" id="toptwist">
+            <div class="flipper"> 
+                <div id="spotifyExpl">My (currently) most listened song</div>
+                <img id="spotifyLogo" class="front-face" src="/images/spotify.png">
+                <div id="spotifyCard"><img class="back-face" id="spotifyImg" style="pointer-events: visible;"></div>
+            </div>
+            <svg id="triangle2" viewBox="0 0 100 100">
+                <polygon points="50 0, 100 100, 0 100" style="fill:transparent;stroke:white;stroke-width:.8px; pointer-events: fill;"/>
+            </svg>
+        </div>
+        <div class="triangleWrapper">
+            <svg id="triangle3" viewBox="0 0 100 100">
+            <a href="blog.html">
+            <polygon points="50 0, 100 100, 0 100" style="fill:transparent;stroke:white;stroke-width:.8px; pointer-events: fill;"/>
+            <text x="0" y="0" fill="white" text-anchor="start" transform="rotate(90) translate(50, -47)" class="side-text">Blog</text>
+            </a>
+            </svg>
+        </div>
+        <div class="triangleWrapper">
+            <svg id="triangle4" viewBox="0 0 100 100">
+            <a href="projects.html">
+            <polygon points="50 0, 100 100, 0 100" style="fill:transparent;stroke:white;stroke-width:.8px; pointer-events: fill;"/>
+            <text x="0" y="0" fill="white" text-anchor="start" transform="rotate(270) translate(-90, 54)" class="side-text">Projects</text>
+            </a>
+            </svg>
+        </div>
+        <div class="triangleWrapper" id="bottomtwist">
+            <div class="flipper"> 
+                <img id="SRBIJAA" class="front-face" src="/images/srbija.png">
+                <p class="back-face" style="width: 6.3vw; height: auto; top: 8.5vw; left: 3vw;">soon.</p>
+            </div>
+            <svg id="triangle5" viewBox="0 0 100 100">
+            <polygon points="50 0, 100 100, 0 100" style="fill:transparent;stroke:white;stroke-width:.8px; pointer-events: fill;"/>
+            </svg>
+        </div>
+        <div class="triangleWrapper">
+            <svg id="triangle6" viewBox="0 0 100 100">
+            <a href="links.html"><polygon points="50 0, 100 100, 0 100" style="fill:transparent;stroke:white;stroke-width:.8px; pointer-events: fill;"/>
+            <text x="0" y="0" fill="white" text-anchor="start" transform="rotate(90) translate(47, -45)" class="side-text">Links</text>
+            </a>
+            </svg>
+        </div>
+
+    </div>
+    <script src="/js/spotify.js"></script>
+</body>
+
+</html>

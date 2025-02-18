@@ -1,0 +1,422 @@
+* {
+    transform-style: preserve-3d;
+}
+
+body {
+    background-color: #020205 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    margin: 0;
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(../font/Gilroy-Light.otf);
+}
+
+
+/* font-family: Gilroy for gilroy */
+
+.triangleWrapper {
+    width: 30%;
+    height: 30%;
+    margin: 0;
+    display: inline-block;
+}
+
+#hex {
+    width: 50vw;
+    height: auto;
+    margin-bottom: 10vh;
+}
+
+.side-text {
+    user-select: none;
+    font-family: Gilroy;
+}
+
+.flipper {
+    transition: transform 1s;
+    pointer-events: none;
+    user-select: none;
+}
+
+.front-face {
+    backface-visibility: hidden;
+    position: absolute;
+    pointer-events: none;
+}
+
+.back-face {
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    position: absolute;
+    pointer-events: none;
+}
+
+a:link {
+    color: white;
+    background-color: inherit;
+    text-decoration: none;
+}
+  
+a:visited {
+    color: white;
+    background-color: inherit;
+    text-decoration: none;
+}
+  
+a:hover {
+    color: white;
+    background-color: inherit;
+    text-decoration: none;
+}
+  
+a:active {
+    color: white;
+    background-color: inherit;
+    text-decoration: none;
+}
+
+
+#toptwist:hover .flipper {
+    transform: rotateY(180deg);
+}
+
+#toptwist:hover #triangle2 {
+    transform: rotateY(180deg) translate(0, -2vh) rotate(180deg);
+}
+
+#bottomtwist:hover .flipper {
+    transform: rotateY(180deg);
+}
+
+#bottomtwist:hover #triangle5 {
+    transform: rotateY(180deg) translate(0vw, 2vh);
+}
+
+#spotifyImg {
+    border: 2px white solid;
+    border-radius: 2px;
+    width: 6.3vw; 
+    height: auto; 
+    left: 4.3vw; 
+    top: -0.5vh;
+}
+
+#spotifyExpl {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    top: -7vh;
+    font-family: Gilroy;
+    font-size: 1em;
+    border-bottom: 0;
+    width: 100%;
+    height: 2.4vh;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    text-align: center;
+    margin-bottom: 6vh;
+}
+
+#spotifyName {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+#spotifyLogo {
+    width: 6.5vw; 
+    height: auto; 
+    top: vh; 
+    left: 4.2vw;
+}
+
+#SRBIJAA {
+    width: 9vw;
+    height: auto; 
+    top: 8.5vw; 
+    left: 3vw;
+}
+
+/* Media */
+
+@media only screen and (min-width:320px) {
+
+#hex {
+    zoom: 200%;
+    margin-left: 6.5%;
+}
+
+#spotifyLogo {
+    width: 5vw;
+    top: 4vh;
+}
+
+#spotifyImg {
+    border: 1px white solid;
+    width: 4.4vw;
+    top: -2vw;
+    left: 4.1vw;
+}
+
+#SRBIJAA {
+    width: 7.5vw;
+    top: 2.1vh;
+    left: 3.2vw;
+}
+
+#spotifyExpl {
+    font-size: 0.3rem;
+    margin-bottom: 2.1vh;
+}
+
+#triangle1 {
+/* Phone */
+    transform: translate(7vw, 0vh) rotate(120deg);
+    transition: transform 1s;
+}
+
+#triangle1:hover {
+    transform: translate(5vw, -1vh) rotate(120deg);
+}
+
+#triangle2 {
+    transform: translate(0, -2vh) rotate(180deg);
+    transition: transform 1s;
+    perspective: 10000px;
+}
+
+#triangle3 {
+    transform: translate(-7vw, 0vh) rotate(240deg);
+    transition: transform 1s;
+}
+
+#triangle3:hover {
+    transform: translate(-5vw, -1vh) rotate(240deg);
+}
+
+#triangle4 {
+    transform: translate(7vw, -3vh) rotate(60deg);
+    transition: transform 1s;
+}
+
+#triangle4:hover {
+    transform: translate(5vw, -2vh) rotate(60deg);
+}
+
+#triangle5 {
+    transform: translate(0, -1vh);
+    transition: transform 1s;
+}
+
+#triangle5:hover {
+    transform: rotateY(180deg) translate(0vw, -1vh);
+    perspective: 10000px;
+}
+
+#bottomtwist:hover #triangle5 {
+    transform: rotateY(180deg) translate(0vw, -1vh);
+}
+
+#triangle6 {
+    transform: translate(-7vw, -3vh) rotate(300deg);
+    transition: transform 1s;
+}
+
+#triangle6:hover {
+    transform: translate(-5vw, -2vh) rotate(300deg);
+}
+}
+
+@media only screen and (min-width:900px) {
+#triangle1 {
+    transform: translate(7vw, -2vh) rotate(120deg);
+    transition: transform 1s;
+}
+
+#triangle1:hover {
+    transform: translate(5vw, 0vh) rotate(120deg);
+}
+
+#triangle2 {
+    transform: translate(0, -2vh) rotate(180deg);
+    transition: transform 1s;
+    perspective: 10000px;
+}
+
+#triangle2:hover {
+    transform: rotateY(180deg) translate(0, -2vh) rotate(180deg);
+}
+
+#triangle3 {
+    transform: translate(-7vw, -2vh) rotate(240deg);
+    transition: transform 1s;
+}
+
+#triangle3:hover {
+    transform: translate(-5vw, 1vh) rotate(240deg);
+}
+
+#triangle4 {
+    transform: translate(7vw, -2vh) rotate(60deg);
+    transition: transform 1s;
+}
+
+#triangle4:hover {
+    transform: translate(5vw, -3vh) rotate(60deg);
+}
+
+#triangle5 {
+    transform: translate(0, 0vh);
+    transition: transform 1s;
+}
+
+#triangle5:hover {
+    transform: rotateY(180deg) translate(0vw, 0vh);
+    perspective: 10000px;
+}
+
+#triangle6 {
+    transform: translate(-7vw, -2vh) rotate(300deg);
+    transition: transform 1s;
+}
+
+#triangle6:hover {
+    transform: translate(-5vw, -3vh) rotate(300deg);
+}
+}
+
+
+
+
+@media (min-width:1023px)
+{
+/* PC */
+#hex {
+    zoom: 0%;
+    margin-left: 0%;
+}
+
+ #triangle1 {
+    transform: translate(7vw, 5vh) rotate(120deg);
+    transition: transform 1s;
+}
+
+#triangle1:hover {
+    transform: translate(5vw, 3vh) rotate(120deg);
+}
+
+#triangle2 {
+    transform: translate(0, -2vh) rotate(180deg);
+    transition: transform 1s;
+    perspective: 10000px;
+}
+
+#triangle3 {
+    transform: translate(-7vw, 5vh) rotate(240deg);
+    transition: transform 1s;
+}
+
+#triangle3:hover {
+    transform: translate(-5vw, 2vh) rotate(240deg);
+}
+
+#triangle4 {
+    transform: translate(7vw, -5vh) rotate(60deg);
+    transition: transform 1s;
+}
+
+#triangle4:hover {
+    transform: translate(5vw, -2vh) rotate(60deg);
+}
+
+#triangle5 {
+    transform: translate(0, 2vh);
+    transition: transform 1s;
+}
+
+#bottomtwist:hover #triangle5 {
+    transform: rotateY(180deg) translate(0vw, 2vh);
+}
+
+
+#triangle6 {
+    transform: translate(-7vw, -5vh) rotate(300deg);
+    transition: transform 1s;
+}
+
+#triangle6:hover {
+    transform: translate(-5vw, -2vh) rotate(300deg);
+}
+#spotifyImg {
+    border: 2px white solid;
+    border-radius: 2px;
+    width: 6.3vw; 
+    height: auto; 
+    left: 4.3vw; 
+    top: -0.5vh;
+}
+
+#spotifyExpl {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    top: -7vh;
+    font-family: Gilroy;
+    font-size: 1em;
+    border-bottom: 0;
+    width: 100%;
+    height: 2.4vh;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    text-align: center;
+    margin-bottom: 6vh;
+}
+
+#spotifyName {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+#spotifyLogo {
+    width: 6.5vw; 
+    height: auto; 
+    top: 10vh; 
+    left: 4.2vw;
+}
+
+#SRBIJAA {
+    width: 9vw;
+    height: auto; 
+    top: 8.5vw; 
+    left: 3vw;
+}
+}
+
+#triangle1 {
+    pointer-events: none;
+}
+
+#triangle2 {
+    pointer-events: none;
+}
+
+#triangle3 {
+    pointer-events: none;
+}
+
+#triangle4 {
+    pointer-events: none;
+}
+
+#triangle5 {
+    pointer-events: none;
+}
+
+#triangle6 {
+    pointer-events: none;
+}

@@ -1,0 +1,266 @@
+body {
+    background: repeating-linear-gradient( 45deg, black, black 8px, #08090d 8px, #08090d 18px);
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #dedede;
+    text-align: center;
+    margin: 0;
+}
+
+a {
+    color: rgb(76, 76, 252);
+}
+
+ol {
+    margin-block-start: .5em;
+    margin-block-end: .5em;
+}
+
+ul {
+    margin-block-start: .5em;
+    margin-block-end: .5em;
+}
+
+pre {
+    font-family: inherit;
+    text-wrap: wrap;
+    color: #dedede;
+}
+
+h2 {
+   text-align: center; 
+   font-weight: bold;
+   margin: 0;
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(../font/Gilroy-Light.otf);
+}
+
+@font-face {
+    font-family: Gilroy-Bold;
+    src: url(../font/Gilroy-Bold.ttf);
+}
+
+#dropdown
+{
+    position: relative;
+    display: inline-block;
+    border: #dedede 1px solid;
+    margin-bottom: 5%;
+    min-width: 80%;
+}
+
+#dropbtn
+{
+    font-family: Gilroy;
+    background-color: transparent;
+    color: #dedede;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+#dropdown-content a 
+{
+    font-family: Gilroy;
+    color: #dedede;
+    padding: 12px 16px;  
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+#dropdown-content a:hover {
+    background-color: #f1f1f1; 
+    color: black;
+}
+
+#dropdown-content .serbiaposting:hover {
+    background: linear-gradient(to bottom, #d12121 31%, #2121d1 32%, #2121d1 70%,#dedede 68%, #dedede 100%);
+    color: white;
+}
+
+#dropdown-content .basketball:hover {
+    background: #db7516;
+    color: white;
+}
+
+
+#dropdown-content
+{
+    display: none;
+    position: absolute;
+    background-color: #020205;
+    min-width: 100%;
+    z-index: 1;
+    border: #dedede 1px solid;
+}
+
+#dropdown:hover #dropdown-content {
+    display: block;
+}
+
+#infocard {
+    background-color: #020205;
+    height: fit-content;
+    height: 60vh;
+    border: #dedede 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: space-evenly;
+    color: #dedede;
+    transition: width 1s, height 1s;
+}
+
+#hex {
+    cursor: pointer;
+    fill-opacity: 1;
+    stroke: #dedede;
+    stroke-width: 5px;
+    transform: scale(0.2) translate(0, -11vh);
+    transform-origin: 50% 50%;
+    margin: 0;
+}
+
+#blogposts {
+    flex-grow: 2;
+    max-width: 80%;
+    width: 80%;
+    height: 80%;
+    max-height: 80%;
+    border-top: 1px #dedede solid;
+    border-bottom: 1px #dedede solid;
+    display: flex;
+    overflow-y: scroll;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: space-evenly;
+}
+
+#title {
+    font-size: 3.2em;
+    font-family: Gilroy;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+#heximg {
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+#postpage {
+    width: 80%;
+    min-height: 50vh;
+    height: fit-content;
+    text-wrap: break-word;
+    border-top: 1px #dedede solid;
+    border-bottom: 1px #dedede solid;
+    font-family: Gilroy;
+    font-size: 1.2em;
+    display: none;
+    color: #dedede;
+}
+
+#date
+{
+    font-family: Gilroy;
+    color: #a4a4a7;
+    font-size: 1em;
+    margin-bottom: 3%;
+    margin-top: -2%;
+    display: none;
+}
+
+#posttext {
+    transition: color 1s ease;
+    height: fit-content;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: left;
+    color: transparent;
+    font-size: 0.8em;
+}
+
+#color-fill #hex {
+    fill: black;
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #dedede;
+}
+
+
+@media only screen and (max-width:900px) 
+{
+    #infocard 
+    {
+        width: 90vw;
+        height: 80vh;
+    }
+
+    .blogimage {
+        width: 75vw;
+    }
+
+    .imageheader {
+        width: 75vw;
+    }
+}
+
+
+@media only screen and (min-width:1023px) and (max-width: 1921px)
+{
+    #infocard 
+    {
+        width: 30vw;
+        height: 75vh;
+        /*margin-top: 10%;*/
+    }
+
+    #postpage 
+    {
+        font-size: 1.7em;
+    }
+
+    #title 
+    {
+        margin-bottom: 1%;
+        margin-top: 3%;
+    }
+
+    #posttext 
+    {
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    #date
+    {
+        font-family: Gilroy;
+        color: #a4a4a7;
+        font-size: 1em;
+        margin-bottom: 1%;
+        margin-top: 0;
+        display: none;
+    }
+}
+

@@ -1,0 +1,98 @@
+body {
+    background: repeating-linear-gradient(45deg, black, black 8px, #08090d 8px, #08090d 18px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    user-select: none;
+    text-align: center;
+    margin: 0;
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(../font/Gilroy-Light.otf);
+}
+
+p {
+    margin-bottom: 0;
+}
+
+#hex {
+    cursor: pointer;
+    fill-opacity: 1;
+    stroke: white;
+    stroke-width: 5px;
+    transform: scale(0.2) translate(0, -70%);
+    transform-origin: 50% 50%;
+}
+
+
+#color-fill #hex {
+    fill: black;
+}
+
+#prns {
+    text-align: center;
+}
+
+#infocard {
+    background-color: #020205;
+    width: 30vw;
+    height: 70vh;
+    border: white 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-evenly;
+    max-width: 95%;
+    min-width: 30%;
+}
+
+#title {
+    font-family: Gilroy;
+    color: white;
+    font-size: 5vh;
+    margin-bottom: 0;
+    margin-top: 2%;
+}
+
+#maintext {
+    color: white;
+    font-family: Gilroy;
+    font-size: 2vh;
+    max-width: 90%;
+    min-width: 10%;
+}
+
+/* MOBILE & TABLET */
+@media only screen and (max-width:1023px) 
+{
+    #infocard 
+    {
+        width: 90vw;
+        height: 80vh;
+    }
+
+    #title 
+    {
+        font-size: 8vw;
+        vertical-align: middle;
+    }
+
+    #maintext 
+    {
+        font-size: 3.8vw;
+    }
+}
+
+/* DESKTOP */
+@media only screen and (min-width:1023px) and (max-width: 1921px)
+{
+    #title 
+    {
+        font-size: 2.5vw;
+    }
+}
