@@ -1,0 +1,211 @@
+{
+    "data": [
+        {
+            "vendorType": "Trafika",
+            "monsters": [
+                "classic",
+                "mango",
+                "white",
+                "aussie",
+                "valentino",
+                "throttle",
+                "strawberry"
+            ],
+            "hasCard": true,
+            "featured": true,
+            "price": "220",
+            "lat": "44.800613",
+            "long": "20.465791"
+        },
+        {
+            "vendorType": "Trafika",
+            "monsters": [
+                "classic",
+                "mango",
+                "white",
+                "aussie",
+                "valentino",
+                "throttle",
+                "strawberry"
+            ],
+            "hasCard": false,
+            "featured": true,
+            "price": "220",
+            "lat": "44.800689",
+            "long": "20.465622"
+        },
+        {
+            "vendorType": "Prodavnica",
+            "monsters": [
+                "classic",
+                "mango",
+                "white",
+                "aussie",
+                "strawberry"
+            ],
+            "hasCard": true,
+            "featured": false,
+            "price": "170",
+            "lat": "44.8753",
+            "long": "20.472030"
+        },
+        {
+            "vendorType": "Prodavnica",
+            "monsters": [
+                "classic",
+                "mango",
+                "white",
+                "aussie",
+                "strawberry",
+                "throttle",
+                "valentino"
+            ],
+            "hasCard": true,
+            "featured": false,
+            "price": "170",
+            "lat": "44.872053",
+            "long": "20.472666"
+        },
+        {
+            "vendorType": "Trafika",
+            "monsters": [
+                "classic",
+                "mango",
+                "white",
+                "aussie",
+                "strawberry",
+                "throttle",
+                "valentino"
+            ],
+            "hasCard": true,
+            "featured": false,
+            "price": "200",
+            "lat": "44.874583",
+            "long": "20.448188"
+        },
+        {
+            "vendorType": "Trafika",
+            "monsters": [
+                "white",
+                "strawberry"
+            ],
+            "hasCard": false,
+            "featured": false,
+            "price": "160",
+            "lat": "44.877432",
+            "long": "20.452007"
+        },
+        {
+            "vendorType": "Trafika",
+            "monsters": [
+                "white",
+                "mango",
+                "strawberry",
+                "valentino",
+                "throttle"
+            ],
+            "hasCard": true,
+            "featured": false,
+            "price": "200",
+            "lat": "44.875385",
+            "long": "20.462079"
+        },
+        {
+            "vendorType": "Trafika",
+            "monsters": [
+                "classic",
+                "white",
+                "mango",
+                "strawberry",
+                "valentino",
+                "throttle"
+            ],
+            "hasCard": true,
+            "featured": false,
+            "price": "200",
+            "lat": "44.841150",
+            "long": "20.490765"
+        },
+        {
+            "vendorType": "Trafika",
+            "monsters": [
+                "classic",
+                "white",
+                "mango",
+                "strawberry"
+            ],
+            "hasCard": true,
+            "featured": false,
+            "price": "170",
+            "lat": "44.881813",
+            "long": "20.455795"
+        },
+        {
+            "vendorType": "Trafika",
+            "monsters": [
+                "white",
+                "mango",
+                "strawberry"
+            ],
+            "hasCard": false,
+            "featured": false,
+            "price": "170",
+            "lat": "44.817446",
+            "long": "20.483851"
+        },
+        {
+            "vendorType": "Trafika",
+            "monsters": [
+                "classic",
+                "white",
+                "mango",
+                "strawberry"
+            ],
+            "hasCard": false,
+            "featured": false,
+            "price": "260",
+            "lat": "44.813407",
+            "long": "20.459772"
+        },
+        {
+            "vendorType": "Trafika",
+            "monsters": [
+                "classic",
+                "white"
+            ],
+            "hasCard": false,
+            "featured": false,
+            "price": "240",
+            "lat": "44.814294",
+            "long": "20.456849"
+        },
+        {
+            "vendorType": "Trafika",
+            "monsters": [
+                "classic",
+                "white",
+                "strawberry",
+                "mango"
+            ],
+            "hasCard": true,
+            "featured": false,
+            "price": "200",
+            "lat": "44.802339",
+            "long": "20.455878"
+        },
+        {
+            "vendorType": "Prodavnica",
+            "monsters": [
+                "classic",
+                "white",
+                "throttle",
+                "mango"
+            ],
+            "hasCard": true,
+            "featured": false,
+            "price": "170",
+            "lat": "44.804417",
+            "long": "20.456184"
+        }
+    ]
+}

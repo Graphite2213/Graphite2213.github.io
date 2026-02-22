@@ -1,0 +1,100 @@
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.vendorInfo {
+    display: grid;
+    width: fit-content;
+    min-width: 200px;
+    height: 235px;
+
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30px 100px 70px 30px;
+    column-gap: 5px;
+    padding: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+}
+
+.vendorType {
+    display: flex;
+    grid-column-start: span 2;
+    padding-bottom: 2px;
+    border-bottom: grey 1px solid;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: larger;
+}
+
+.availability {
+    display: flex;
+    grid-column-start: span 2;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3px;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 5px;
+    border-top: 1px solid grey;
+}
+
+.price>span {
+    font-size: 40px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 5px;
+    border-top: 1px solid grey;
+}
+
+.card>span {
+    font-size: 40px;
+}
+
+.special {
+    display: flex;
+    grid-column-start: span 2;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 10px;
+    border-top: 1px solid grey;
+    font-size: 15px;
+}
+
+.monsterlist {
+    display: flex;
+    padding-top: 5px;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.monster {
+    height: 70px;
+    width: 30px;
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+    background-color: transparent !important; 
+    box-shadow: none !important;
+}
